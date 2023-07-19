@@ -1,0 +1,12 @@
+[
+    {
+        "model": "bangazonapi.orders",
+        "pk": 1,
+        "fields": {
+            "date": "2023-12-12",
+            "closed": true,
+            "customer_id": 2
+            
+        }
+    }
+]

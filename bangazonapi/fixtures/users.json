@@ -1,0 +1,24 @@
+[
+    {
+        "model": "bangazonapi.user",
+        "pk": 1,
+        "fields": {
+            "name": "DeCorrean Davis",
+            "bio": "In this place to buy somer damn goods.",
+            "image": "https://media.npr.org/assets/img/2021/01/14/gettyimages-617497668_custom-031504dd32ee6e2fdc0c004c481018f9f5aaca9c.jpg",
+            "isseller": true,
+            "uid": 1
+        }
+    },
+    {
+        "model": "bangazonapi.user",
+        "pk": 2,
+        "fields": {
+            "name": "Cory Davis",
+            "bio": "Tryna sell some damn goods.",
+            "image": "https://media.npr.org/assets/img/2021/01/14/gettyimages-617497668_custom-031504dd32ee6e2fdc0c004c481018f9f5aaca9c.jpg",
+            "isseller": false,
+            "uid": 2
+        }
+    }
+]
