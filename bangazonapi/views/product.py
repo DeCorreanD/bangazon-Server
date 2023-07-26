@@ -20,6 +20,9 @@ class ProductView(ViewSet):
     def list(self, request):
 
         product = Product.objects.all()
+        seller_id = request.query_params.get('sellerId', None)
+        if seller_id is not None:
+            products = products.filter(seller_id=seller_id)
         serializer = ProductSerializer(product, many=True)
         return Response(serializer.data)
       
@@ -30,7 +33,7 @@ class ProductView(ViewSet):
         Response -- JSON serialized Product instance
         """
 
-        seller_id = User.objects.get(pk=request.data["seller_id"])
+        seller_id = User.objects.get(pk=request.data["sellerId"])
         
         product = Product.objects.create(
             name=request.data["name"],
