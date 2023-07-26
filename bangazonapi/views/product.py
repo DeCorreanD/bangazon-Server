@@ -22,7 +22,7 @@ class ProductView(ViewSet):
         product = Product.objects.all()
         seller_id = request.query_params.get('sellerId', None)
         if seller_id is not None:
-            products = products.filter(seller_id=seller_id)
+            product = product.filter(seller_id=seller_id)
         serializer = ProductSerializer(product, many=True)
         return Response(serializer.data)
       
